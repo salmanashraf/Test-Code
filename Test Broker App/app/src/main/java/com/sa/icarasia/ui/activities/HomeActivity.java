@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.sa.icarasia.R;
+import com.sa.icarasia.model.UserFactory;
 import com.sa.icarasia.model.UserModel;
 import com.sa.icarasia.realm.RealmController;
 import com.sa.icarasia.ui.activities.base.BaseActivity;
@@ -70,7 +71,9 @@ public class HomeActivity extends BaseActivity {
         _btnUserType.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showMessage("Your account type is " + model.getUsertype());
+               // showMessage("Your account type is " + model.getUsertype());
+
+                UserFactory.getInstance().getUser(model.getUsertype()).showAccountType(mContext);
             }
         });
 

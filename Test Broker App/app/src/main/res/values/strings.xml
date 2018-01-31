@@ -11,4 +11,6 @@
     <string name="update_number">Update Number</string>
     <string name="update">Update</string>
     <string name="cancel">Cancel</string>
+
+    <string name="account_type">Your account type is</string>
 </resources>
